@@ -1,0 +1,14 @@
+{% extends "catalog/base.html" %}
+{% block title %}Products{% endblock %}
+{% block content %}
+<h2>All Products</h2>
+<ul>
+    {% for product in products %}
+    <li>
+        <a href="{% url 'product_detail' product.id %}">{{ product.title }}</a> - ${{ product.price }}
+    </li>
+    {% empty %}
+    <li>No products available.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

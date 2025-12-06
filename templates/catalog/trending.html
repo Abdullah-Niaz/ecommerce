@@ -1,0 +1,12 @@
+{% extends "catalog/base.html" %}
+{% block title %}Trending Products{% endblock %}
+{% block content %}
+<h2>Trending Products</h2>
+<ul>
+    {% for product in trending %}
+    <li>{{ product.title }} - ${{ product.price }}</li>
+    {% empty %}
+    <li>No trending products yet.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
