@@ -1,0 +1,8 @@
+Django
+djangorestframework
+django-redis
+psycopg2-binary        # if you plan to switch to PostgreSQL
+celery               # optional, for async tasks
+redis                  # Python Redis client
+pillow                # for image handling, if needed
+python-dotenv          # for environment variables
